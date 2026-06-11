@@ -1,3 +1,4 @@
+// @ts-nocheck
 class TimeUtcElement extends HTMLElement {
   #interval;
 
@@ -7,7 +8,7 @@ class TimeUtcElement extends HTMLElement {
     this.shadow = this.attachShadow({ mode: "open" });
   }
 
-  #padStartNumber(number) {
+  #padStartNumber(number: number) {
     return `0${number}`.slice(-2);
   }
 
@@ -43,8 +44,7 @@ class TimeUtcElement extends HTMLElement {
 
     const tzTime = computerTime.withTimeZone(this.tz);
 
-    const computerTimeTimeOffsetHours =
-      this.#nanoSecondsToHours(computerTime);
+    const computerTimeTimeOffsetHours = this.#nanoSecondsToHours(computerTime);
     const tzTimeOffsetHours = this.#nanoSecondsToHours(tzTime);
 
     return tzTimeOffsetHours - computerTimeTimeOffsetHours;

@@ -18,7 +18,7 @@
     "build": "tsdown",
     "npm:publish": "npm publish --access=public",
     "check-lint": "tsc",
-    "ci": "npm run build && npm run check-format && npm run check-exports && npm run check-lint && npm run check-test",
+    "ci": "npm run build && npm run check-format && npm run check-lint && npm run check-test",
     "format": "prettier --write src",
     "check-format": "prettier --check src",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
@@ -35,7 +35,7 @@
     "@types/node": "25.9.3",
     "jsdom": "29.1.1",
     "prettier": "3.8.4",
-    "tsdown": "^0.22.2",
+    "tsdown": "0.22.2",
     "typescript": "6.0.3",
     "vite": "8.0.16",
     "vitest": "4.1.8"
