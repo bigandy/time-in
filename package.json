@@ -1,0 +1,58 @@
+{
+  "name": "@bigandy/time-in",
+  "version": "1.0.0",
+  "author": "Andrew JD Hudson @bigandy (https://andrewhudson.dev/)",
+  "description": "A web component that shows the time in a time zone",
+  "keywords": [
+    "Temporal",
+    "time-zone",
+    "web-component"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup",
+    "npm:publish": "npm publish --access=public",
+    "check-lint": "tsc",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run check-lint && npm run check-test",
+    "format": "prettier --write src",
+    "check-format": "prettier --check src",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "local-release": "changeset version && changeset publish",
+    "release": "npm run ci && changeset publish",
+    "prepublishOnly": "npm run ci",
+    "test": "vitest",
+    "check-test": "vitest run"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.3",
+    "@changesets/cli": "2.31.0",
+    "@testing-library/dom": "10.4.1",
+    "@types/node": "25.9.3",
+    "jsdom": "29.1.1",
+    "prettier": "3.8.4",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3",
+    "vite": "8.0.16",
+    "vitest": "4.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigandy/time-in.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bigandy/time-in/issues"
+  },
+  "license": "MIT",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  }
+}

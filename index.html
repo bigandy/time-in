@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite</title>
+
+    <script type="module" src="/src/index.ts"></script>
+    <style>
+time-in {
+	/* text-align: center; */
+	display: block;
+
+	&::part(label) {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	&::part(time) {
+		font-size: 100px;
+		font-family: monospace;
+		vertical-align: middle;
+
+		display: inline-flex;
+		align-items: center;
+
+		> span {
+		}
+	}
+
+	&::part(seperator) {
+		color: red;
+		font-size: 75px;
+		font-family: serif;
+		/* background: yellow; */
+		text-box: trim-both ex alphabetic;
+	}
+
+	&::part(time-difference) {
+		color: green;
+		font-size: 50px;
+		font-family: monospace;
+		vertical-align: middle;
+	}
+
+	&::part(number) {
+		color: orange;
+	}
+}
+
+@layer default {
+	body {
+		padding: 3rem;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	body {
+		min-height: 100%;
+		margin: 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	:where(button, h1, h2, h3) {
+		text-box: trim-both cap alphabetic;
+	}
+
+	:where(h1, h2, h3) {
+		margin: 0;
+	}
+}
+
+    </style>
+  </head>
+  <body>
+      <time-in tz="america/mexico_city" label="Mexico City" hide-seconds show-difference></time-in>
+<time-in tz="america/los_angeles" label="L.A." hide-seconds show-difference></time-in>
+<time-in tz="america/vancouver" label="Vancouver" hide-seconds show-difference></time-in>
+<time-in tz="america/new_york" label="New York" hide-seconds show-difference></time-in>
+
+
+
+
+
+
+
+
+
+<h2>tz attribute</h2>
+<p>europe/london</p>
+<time-in tz="europe/london"></time-in>
+
+<p>europe/paris</p>
+<time-in tz="europe/paris"></time-in>
+
+<p>utc</p>
+<time-in tz="utc"></time-in>
+
+<p>No tz supplied. Shows current computer time zone</p>
+<time-in></time-in>
+
+<h2>hide-seconds attribute</h2>
+<time-in hide-seconds></time-in>
+
+<h2>label attribute</h2>
+<time-in label="New York" tz="america/new_york"></time-in>
+<time-in label="Seoul" tz="asia/seoul"></time-in>
+<time-in label="Auckland, New Zealand" tz="pacific/auckland"></time-in>
+
+<h2>show-difference attribute</h2>
+
+<time-in show-difference label="London" tz="europe/london"></time-in>
+<time-in show-difference label="Paris" tz="europe/paris"></time-in>
+<time-in show-difference label="Moscow" tz="europe/moscow"></time-in>
+<time-in show-difference label="New York" tz="america/new_york"></time-in>
+<time-in show-difference label="Seoul" tz="asia/seoul"></time-in>
+<time-in
+	show-difference
+	label="Auckland, New Zealand"
+	tz="pacific/auckland"
+></time-in>
+
+
+
+
+
+  </body>
+</html>
