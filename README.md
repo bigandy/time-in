@@ -19,6 +19,8 @@ A web component that allows you to see the time in a specified time zone.
 
 ## Optional attributes
 
+### tz
+provide a country code e.g. europe/paris and the component will show the time of that city.
 
 
 ## Misc Notes
