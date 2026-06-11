@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.0.2
+
+### Patch Changes
+
+- 1dd3766: another
+
 ## 1.0.1
 
 ### Patch Changes
