@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.1.0
+
+### Minor Changes
+
+- e8e4094: fix TS errors
+
 ## 1.0.2
 
 ### Patch Changes
