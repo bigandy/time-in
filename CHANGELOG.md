@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.2.0
+
+### Minor Changes
+
+- 69e0e77: add twelve-hour attribute
+
 ## 1.1.0
 
 ### Minor Changes
