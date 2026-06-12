@@ -5,75 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite</title>
 
-    <script type="module" src="/src/index.ts"></script>
-    <style>
-time-in {
-	/* text-align: center; */
-	display: block;
-
-	&::part(label) {
-		font-size: 20px;
-		margin: 0;
-	}
-
-	&::part(time) {
-		font-size: 100px;
-		font-family: monospace;
-		vertical-align: middle;
-
-		display: inline-flex;
-		align-items: center;
-	}
-
-	&::part(seperator) {
-		color: red;
-		font-size: 75px;
-		font-family: serif;
-		text-box: trim-both ex alphabetic;
-	}
-
-	&::part(time-difference) {
-		color: green;
-		font-size: 50px;
-		font-family: monospace;
-		vertical-align: middle;
-	}
-
-	&::part(number) {
-		color: orange;
-	}
-}
-
-@layer default {
-	body {
-		padding: 3rem;
-	}
-
-	html {
-		height: 100%;
-	}
-
-	body {
-		min-height: 100%;
-		margin: 0;
-	}
-
-	* {
-		box-sizing: border-box;
-	}
-
-	:where(button, h1, h2, h3) {
-		text-box: trim-both cap alphabetic;
-	}
-
-	:where(h1, h2, h3) {
-		margin: 0;
-	}
-}
-
-    </style>
+	<script type="module" src="/src/index.ts"></script>
+	<link rel="stylesheet" href="/styles.css">
   </head>
 <body>
+
 <h2>tz attribute</h2>
 <p>europe/london</p>
 <time-in tz="europe/london"></time-in>
@@ -108,7 +44,8 @@ time-in {
 	tz="pacific/auckland"
 ></time-in>
 
-
+<h2>twelve-hours - attribute for using 12-hour clock</h2>
+<time-in twelve-hours></time-in>
 
 
 
