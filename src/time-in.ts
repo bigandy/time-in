@@ -41,7 +41,7 @@ class TimeIn extends HTMLElement {
   }
 
   #getTimeDifferenceInHours() {
-    if (typeof this.#tz === 'undefined') {
+    if (typeof this.#tz === "undefined") {
       return 0;
     }
 
@@ -54,7 +54,6 @@ class TimeIn extends HTMLElement {
     const tzTimeOffsetHours = this.#nanoSecondsToHours(tzTime);
 
     return tzTimeOffsetHours - computerTimeTimeOffsetHours;
-
   }
 
   #printTime() {
