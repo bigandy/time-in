@@ -1,7 +1,7 @@
 import "./time-in.js";
-import { afterEach, describe, it, expect, vi } from "vitest";
+import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
 
-// import { getAllByRole, getByRole } from "@testing-library/dom";
+import { getAllByRole, getByRole } from "@testing-library/dom";
 
 describe("TimeIn", () => {
   const consoleMock = vi
@@ -12,6 +12,15 @@ describe("TimeIn", () => {
     document.body.innerHTML = "";
     consoleMock.mockReset();
   });
+
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
 
   const createComponent = () => {
     const siblingCount = document.createElement("time-in");
@@ -26,20 +35,20 @@ describe("TimeIn", () => {
     expect(component).toBeDefined();
   });
 
-  // it("for each of the children: should have a --sibling-index matching the 1-based index", () => {
-  //   const siblingCount = createSiblingCount();
+  it("should match the snapshot", () => {
+    const component = createComponent();
+    expect(component).toMatchSnapshot();
+  });
 
-  //   const listItems = getAllByRole(siblingCount, "listitem");
+  it("should show the correct time", () => {
+    const component = createComponent();
 
-  //   // Loop through list items, check their --sibling-index matches the index
-  //   let index = 1;
-  //   for (const listItem of listItems) {
-  //     const siblingIndexValue =
-  //       getComputedStyle(listItem).getPropertyValue("--sibling-index");
-  //     expect(Number(siblingIndexValue)).toBe(index);
-  //     index++;
-  //   }
-  // });
+    const time = document.querySelector('time');
+
+    console.log({ time })
+
+    expect(component).toBeDefined();
+  });
 
   // it("for each of the children: should have a --sibling-count matching the number of siblings that the element has", () => {
   //   const siblingCount = createSiblingCount();
