@@ -32,7 +32,7 @@ if you want a numerical representation of how many hours ahead or behind your cu
 hate showing the seconds? use the `hide-seconds` attribute.
 
 ### label
-want to provide a label to show what time the component corresponds to? Use the `label` prop.
+want to provide a label to show what time the component corresponds to? Use the `label` attribute.
 
 
 ## Parts
