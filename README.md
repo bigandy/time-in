@@ -6,7 +6,7 @@ A web component that allows you to see the time in a specified time zone.
 
 - `npm run dev` - runs the vite dev environment
 - `npm run build` - builds the project with vite build
-- `npm run local-release` - publishes the package to npm (needs One Time Password) after doing all the checks beforehand
+- `npm run local-release` - publishes the package to npm after doing all the checks beforehand
 - `npx changeset` - creates a changeset of the latest changes. You can choose if it is a patch, minor, or major change.
 - `npm run test` - runs the tests with vitest in watch mode
 - `npm run check-test` runs the tests
@@ -31,7 +31,7 @@ if you want a numerical representation of how many hours ahead or behind your cu
 ### hide-seconds
 hate showing the seconds? use the `hide-seconds` attribute.
 
-## label
+### label
 want to provide a label to show what time the component corresponds to? Use the `label` prop.
 
 
