@@ -1,21 +1,23 @@
-interface TimeIn {
-  isTwentyFour?: boolean;
-  showDifference?: boolean;
-  hideSeconds?: boolean;
-}
+// interface TimeIn {
+//   isTwentyFour?: boolean;
+//   showDifference?: boolean;
+//   hideSeconds?: boolean;
+//   isTwelve?: boolean;
+// }
 
 class TimeIn extends HTMLElement {
   #interval?: undefined | ReturnType<typeof setTimeout>;
   #shadow: ShadowRoot;
   #now?: Temporal.PlainTime;
+  #diff?: number;
+  #tz?: string;
+  #label?: string;
+
   // Props
   #hideSeconds?: boolean;
   #showDifference?: boolean;
   #isTwelveHours?: boolean;
-
-  #diff?: number;
-  #tz?: string;
-  #label?: string;
+  // end props.
 
   constructor() {
     super();
@@ -45,6 +47,8 @@ class TimeIn extends HTMLElement {
       ? (hour % 12).toString()
       : this.#padStartNumber(hour);
     let suffix = "";
+
+    // AHTODO. How to internationalise this, or pass in props for the am/pm??
     if (this.#isTwelveHours) {
       suffix = hour > 12 ? "pm" : "am";
     }
