@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.3.2
+
+### Patch Changes
+
+- f16386c: update readme
+
 ## 1.3.1
 
 ### Patch Changes
