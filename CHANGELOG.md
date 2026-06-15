@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.3.0
+
+### Minor Changes
+
+- 591fb38: add all attributes and CSS parts to readme
+
 ## 1.2.0
 
 ### Minor Changes
