@@ -1,6 +1,6 @@
 {
   "name": "@bigandy/time-in",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "author": "Andrew JD Hudson @bigandy (https://andrewhudson.dev/)",
   "description": "A web component that shows the time in a time zone",
   "keywords": [
