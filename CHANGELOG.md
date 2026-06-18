@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.3.3
+
+### Patch Changes
+
+- d70c642: readme typo
+
 ## 1.3.2
 
 ### Patch Changes
