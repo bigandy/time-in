@@ -23,7 +23,7 @@ A web component that allows you to see the time in a specified time zone.
 provide a country code e.g. `tz="europe/paris"` and the component will show the time of that city's timezone. To get the full list you can get it with: `Intl.supportedValuesOf("timeZone");`. If no tz attribute is supplied, the time will be that of the computer.
 
 ### twelve-hours
-if you want the time to usa a twelve hours clock then use the `twelve-hours` attribute.
+if you want the time to use a twelve hours clock then use the `twelve-hours` attribute.
 
 ### show-difference
 if you want a numerical representation of how many hours ahead or behind your current timezone use the `show-difference`. The difference is between the computer's timezone and the supplied timezone (set with the `tz` attribute).
