@@ -40,16 +40,16 @@
     "check-test": "vitest run"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.18.3",
+    "@arethetypeswrong/cli": "0.18.4",
     "@changesets/cli": "2.31.0",
     "@testing-library/dom": "10.4.1",
-    "@types/node": "25.9.3",
+    "@types/node": "26.0.0",
     "jsdom": "29.1.1",
     "prettier": "3.8.4",
-    "tsdown": "0.22.2",
+    "tsdown": "0.22.3",
     "typescript": "6.0.3",
     "vite": "8.0.16",
-    "vitest": "4.1.8"
+    "vitest": "4.1.9"
   },
   "repository": {
     "type": "git",
@@ -58,5 +58,8 @@
   "bugs": {
     "url": "https://github.com/bigandy/time-in/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "temporal-polyfill-lite": "0.4.1"
+  }
 }
