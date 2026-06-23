@@ -30,9 +30,7 @@ class TimeIn extends HTMLElement {
   }
 
   async #getTemporal() {
-    const { Temporal } =
-      // @ts-expect-error yes this is a valid url. But do I want to include in the js files?
-      await import("https://esm.sh/temporal-polyfill-lite@0.4.0/es2022/temporal-polyfill-lite.mjs");
+    const { Temporal } = await import("temporal-polyfill-lite");
 
     window.Temporal = Temporal;
   }
