@@ -1,5 +1,11 @@
 # @bigandy/time-in
 
+## 1.3.4
+
+### Patch Changes
+
+- 947c3f5: update dependencies
+
 ## 1.3.3
 
 ### Patch Changes
