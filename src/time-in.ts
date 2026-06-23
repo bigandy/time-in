@@ -30,8 +30,7 @@ class TimeIn extends HTMLElement {
   }
 
   async #getTemporal() {
-    const { Temporal } =
-      await import("temporal-polyfill-lite");
+    const { Temporal } = await import("temporal-polyfill-lite");
 
     window.Temporal = Temporal;
   }
